@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{055983A4-2B4C-4C99-AA8B-DA76002DE52B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TS_IDCheck</RootNamespace>
+    <AssemblyName>TS_IDCheck</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2B4FB23E0E8049B9B018F5DAF6EB0919B6AD5D0D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TS_IDCheck_2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=3.2.0.2682, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\emgucv\x64\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.2.0.2682, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\emgucv\x64\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\icCard\svn\dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.Designer, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\SQLite.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ControlThread\DetectThreadHelper.cs" />
+    <Compile Include="DevicePlugins\camera_usb.cs" />
+    <Compile Include="ControlThread\CaptureThread.cs" />
+    <Compile Include="DevicePlugins\ComOpenDoor.cs" />
+    <Compile Include="DevicePlugins\SDReadIdCard.cs" />
+    <Compile Include="DevicePlugins\WavPlayer.cs" />
+    <Compile Include="FileOption\SqliteHelper.cs" />
+    <Compile Include="FileOption\SqliteOper.cs" />
+    <Compile Include="FileOption\SystemConfigIni.cs" />
+    <Compile Include="FormBlackTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBlackTip.Designer.cs">
+      <DependentUpon>FormBlackTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowHelper.cs" />
+    <Compile Include="ReadPassPort\IReadCard.cs" />
+    <Compile Include="ReadPassPort\PassportInfo.cs" />
+    <Compile Include="ReadPassPort\PassportUserID.cs" />
+    <Compile Include="ReadPassPort\ReadPassport.cs" />
+    <Compile Include="ReadPassPort\ReadPassport630.cs" />
+    <Compile Include="ShowBlackWindows.cs" />
+    <Compile Include="StructData.cs" />
+    <Compile Include="TCPConnect\dbscclient.cs" />
+    <Compile Include="ControlThread\DetectThread.cs" />
+    <Compile Include="FileOption\ConfigOperator.cs" />
+    <Compile Include="FileOption\FileOperator.cs" />
+    <Compile Include="FaceSDK\GFaceRecognizer.cs" />
+    <Compile Include="FaceSDK\GFaceSdk.cs" />
+    <Compile Include="DevicePlugins\HSReadIdCard.cs" />
+    <Compile Include="http\CPHttpClient.cs" />
+    <Compile Include="http\PlateHttpClient.cs" />
+    <Compile Include="http\ThirdDbCon.cs" />
+    <Compile Include="ImageDeal.cs" />
+    <Compile Include="ControlThread\InitThread.cs" />
+    <Compile Include="log\SimpleLog.cs" />
+    <Compile Include="ohterprocess.cs" />
+    <Compile Include="ControlThread\PlaySoundThread.cs" />
+    <Compile Include="FileOption\SaveRecordFile.cs" />
+    <Compile Include="DevicePlugins\SCardInfo.cs" />
+    <Compile Include="FileOption\SystemConfig.cs" />
+    <Compile Include="ControlThread\ThreadBase.cs" />
+    <Compile Include="UploadRecord.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileOption\CConsoleManager.cs" />
+    <Compile Include="DevicePlugins\CIDInfo.cs" />
+    <Compile Include="delegate.cs" />
+    <Compile Include="DevicePlugins\CReadIdCard.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="FormBlackTip.resx">
+      <DependentUpon>FormBlackTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon_main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2aae7b7a-0ded-4480-b0c1-a21afabfc200}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibExchangePlate_Abstract\LibExchangePlate_Abstract.csproj">
+      <Project>{74ea8263-95b5-4ca5-8505-88b161b8b586}</Project>
+      <Name>LibExchangePlate_Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibPlateFactory\LibPlateFactory.csproj">
+      <Project>{4f4c5969-174e-4045-b542-d2805d3ce255}</Project>
+      <Name>LibPlateFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaiShou.Common\TaiShou.LogHelper\TaiShou.LogHelper.csproj">
+      <Project>{7e88fae3-2b78-4a80-90b5-cc66747bc390}</Project>
+      <Name>TaiShou.LogHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaiShou.DataConfig\TaiShou.ConfigLoad\TaiShou.ConfigLoad.csproj">
+      <Project>{02eefc05-a54b-47e0-95e7-1d397917888a}</Project>
+      <Name>TaiShou.ConfigLoad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCPLibrary\TCPLibrary.csproj">
+      <Project>{98cefaf6-9e78-4dc2-a0b1-69aa7f9f6e21}</Project>
+      <Name>TCPLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

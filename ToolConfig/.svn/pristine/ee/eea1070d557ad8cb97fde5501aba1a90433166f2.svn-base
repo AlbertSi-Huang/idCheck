@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<SystemConfig>
+  <key name="serialNum" value="szttop" />
+  <key name="serial_number" value="szttop" />
+  <key name="serial_name" value="taisau" />
+  <key name="manager_ip" value="127.0.0.1" />
+  <key name="manager_port" value="8899" />
+  <key name="in_or_out" value="1" />
+  <key name="enable_plate" value="True" />
+  <key name="plate_ip" value="192.168.1.108" />
+  <key name="plate_port" value="554" />
+  <key name="plate_name" value="admin" />
+  <key name="plate_password" value="admin" />
+  <key name="face_detect_score" value="58" />
+  <key name="camera_type" value="1" />
+  <key name="camera_ip" value="192.168.0.108" />
+  <key name="camera_port" value="333" />
+  <key name="camera_name" value="摄像头用户名" />
+  <key name="camera_pwassword" value="摄像头密码" />
+  <key name="local_card" value="441481" />
+  <key name="face_frame" value="60,30,60,30" />
+</SystemConfig>

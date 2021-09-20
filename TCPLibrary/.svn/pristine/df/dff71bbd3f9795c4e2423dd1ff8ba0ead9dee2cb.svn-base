@@ -1,0 +1,17 @@
+﻿
+此目录中以Base开头的类型均是以Z开头类型的默认实现
+
+BaseClientSocket -- ZClientSocket
+BaseDataBuffer -- ZDataBuffer
+BaseMessage -- ZMessage
+BaseProxySocket -- ZProxySocket
+BaseServerSocket -- ZServerSocket
+
+默认实现中，发送数据的格式（应用层协议）为：
+
+4bytes（消息类型） + 4bytes（消息长度） + NBytes（消息内容）
+
+详见 BaseDataBuffer中TryReadMessage方法的实现、BaseMessage中RawData属性的实现
+
+
+用户可以根据需要实现自己的类型，注意重写ZDataBuffer中的TryReadMessage方法和ZMessage中的RawData属性。
